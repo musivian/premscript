@@ -37,12 +37,6 @@ Premium autoscript installer used to install SSH, STUNNEL, OVPN, and PPTP VPN on
 
 - IP Tables
 
-- Webmin - http://VPSIP:10000/
-
-- VnStat - http://VPSIP:85/vpnstat/
-
-- MRTG - http://VPSIP:85/mrtg/
-
 - OVPN Config - http://VPSIP:85/client.ovpn | http://VPSIP:85/openvpn.tar.gz or http://VPSIP:85/client.tar for Centos
 
 
@@ -60,8 +54,6 @@ Premium autoscript installer used to install SSH, STUNNEL, OVPN, and PPTP VPN on
 
 - PPTP VPN : 1732
 
-- Badvpn : 7300
-
 - Nginx : 85
 
 
@@ -71,8 +63,6 @@ Premium autoscript installer used to install SSH, STUNNEL, OVPN, and PPTP VPN on
 
 - iftop
 
-- mtr
-
 - nethogs
 
 - screenfetch
@@ -81,11 +71,4 @@ Premium autoscript installer used to install SSH, STUNNEL, OVPN, and PPTP VPN on
 ### Credits:
 
 Hosting Termurah & VPS-Murah
-
-
-
-
-
-
-
 Created by 0123456
