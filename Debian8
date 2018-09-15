@@ -280,7 +280,7 @@ cp /etc/openvpn/easy-rsa/keys/server.key /etc/openvpn/server.key
 cp /etc/openvpn/easy-rsa/keys/ca.crt /etc/openvpn/ca.crt
 # Setting Server
 cat > /etc/openvpn/server.conf <<-END
-port 1194
+port 33627
 proto tcp
 dev tun
 ca ca.crt
@@ -322,7 +322,7 @@ cat > /home/vps/public_html/client.ovpn <<-END
 client
 dev tun
 proto tcp
-remote $MYIP 1194
+remote $MYIP 33627
 persist-key
 persist-tun
 dev tun
@@ -370,7 +370,7 @@ service openvpn status
 #Setting USW
 apt-get install ufw
 ufw allow ssh
-ufw allow 1194/tcp
+ufw allow 33627/tcp
 sed -i 's|DEFAULT_INPUT_POLICY="DROP"|DEFAULT_INPUT_POLICY="ACCEPT"|' /etc/default/ufw
 sed -i 's|DEFAULT_FORWARD_POLICY="DROP"|DEFAULT_FORWARD_POLICY="ACCEPT"|' /etc/default/ufw
 cat > /etc/ufw/before.rules <<-END
@@ -440,8 +440,8 @@ COMMIT
 -A INPUT -p tcp --dport 109  -m state --state NEW -j ACCEPT
 -A INPUT -p tcp --dport 110  -m state --state NEW -j ACCEPT
 -A INPUT -p tcp --dport 443  -m state --state NEW -j ACCEPT
--A INPUT -p tcp --dport 1194  -m state --state NEW -j ACCEPT
--A INPUT -p udp --dport 1194  -m state --state NEW -j ACCEPT
+-A INPUT -p tcp --dport 33627  -m state --state NEW -j ACCEPT
+-A INPUT -p udp --dport 33627  -m state --state NEW -j ACCEPT
 -A INPUT -p tcp --dport 1732  -m state --state NEW -j ACCEPT
 -A INPUT -p udp --dport 1732  -m state --state NEW -j ACCEPT
 -A INPUT -p tcp --dport 3128  -m state --state NEW -j ACCEPT
@@ -509,7 +509,7 @@ echo "   - Auto-Reboot : [OFF]"  | tee -a log-install.txt
 echo "   - IPv6        : [OFF]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Application & Port Information"  | tee -a log-install.txt
-echo "   - OpenVPN     : TCP 1194 "  | tee -a log-install.txt
+echo "   - OpenVPN     : TCP 33627 "  | tee -a log-install.txt
 echo "   - OpenSSH     : 22, 143"  | tee -a log-install.txt
 echo "   - Stunnel4    : 443"  | tee -a log-install.txt
 echo "   - Dropbear    : 109, 110, 442"  | tee -a log-install.txt
