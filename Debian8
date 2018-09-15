@@ -62,7 +62,7 @@ apt-get update; apt-get -y upgrade;
 apt-get -y install nginx php5-fpm php5-cli
 
 # install essential package
-apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
+apt-get -y install  nmap nano iptables traceroute sysv-rc-conf dnsutils bc openvpn less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
 apt-get -y install build-essential
 apt-get -y install libio-pty-perl libauthen-pam-perl apt-show-versions
 
@@ -521,9 +521,6 @@ echo "   - Nginx       : 85"  | tee -a log-install.txt
 echo "   - PPTP VPN    : 1732"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Server Tools"  | tee -a log-install.txt
-echo "   - htop"  | tee -a log-install.txt
-echo "   - iftop"  | tee -a log-install.txt
-echo "   - nethogs"  | tee -a log-install.txt
 echo "   - screenfetch"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Premium Script Information"  | tee -a log-install.txt
