@@ -392,15 +392,6 @@ ufw disable
 echo 1 > /proc/sys/net/ipv4/ip_forward
 sed -i 's|#net.ipv4.ip_forward=1|net.ipv4.ip_forward=1|' /etc/sysctl.conf
 
-# install ddos deflate
-cd
-apt-get -y install dnsutils dsniff
-wget https://github.com/jgmdev/ddos-deflate/archive/master.zip
-unzip master.zip
-cd ddos-deflate-master
-./install.sh
-rm -rf /root/master.zip
-
 # setting banner
 rm /etc/issue.net
 wget -O /etc/issue.net "https://raw.githubusercontent.com/musivian/premscript/master/issue.net"
