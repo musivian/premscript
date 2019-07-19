@@ -490,8 +490,10 @@ history -c
 # info
 clear
 echo " "
-echo "Installation has been completed!!"
+echo "INSTALLATION COMPLETE!"
 echo " "
+echo "--------------------------- Setup Server Information ---------------------------"
+echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "Server Information"  | tee -a log-install.txt
 echo "   - Timezone    : Asia/Manila (GMT +8)"  | tee -a log-install.txt
@@ -524,5 +526,6 @@ echo "     Mirror (*.tar.gz)       : http://$MYIP:85/openvpn.tar.gz"  | tee -a l
 echo "   - Installation Log        : cat /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo " "
+echo "--------------------------------------------------------------------------------"
 echo "------------------------------------------------------------------!"
 echo " "
